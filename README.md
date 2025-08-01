@@ -25,7 +25,7 @@ docker run -d --platform linux/arm64 \
     -p 7777:7777/tcp \
     -p 8888:8888/tcp \
     -p 7777:7777/udp \
-    -v ./volumes/satisfactory/config:/config \
+    -v ./volumes/satisfactory/config:/home/steam/.config \
     -v ./volumes/satisfactory/server:/satisfactory \
     ghcr.io/joaop221/satisfactory-docker-arm64:main
 ```

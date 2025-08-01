@@ -1,7 +1,7 @@
 #!/bin/bash
 
 server=/satisfactory
-config=/config
+config=/home/steam/.config
 
 # check user
 if [ $(id -u) -eq 0 ]; then

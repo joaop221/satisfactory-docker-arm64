@@ -37,7 +37,7 @@ RUN set -eux; \
  wget -qO - "https://steamcdn-a.akamaihd.net/client/installer/steamcmd_linux.tar.gz" | tar zxvf - -C /home/steam; \
  chown -R steam:steam /home/steam
 
-VOLUME ["/satisfactory", "/config"]
+VOLUME ["/satisfactory", "/home/steam/.config"]
 
 USER steam
 WORKDIR /home/steam
