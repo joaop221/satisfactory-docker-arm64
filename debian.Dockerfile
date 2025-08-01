@@ -14,7 +14,7 @@ ARG debian_version=bookworm
 RUN set -eux; \
  dpkg --add-architecture armhf && dpkg --add-architecture i386; \
     apt-get update && apt-get install -y --no-install-recommends --no-install-suggests \
-    wget curl ca-certificates locales procps gpg libc6:armhf libc6:arm64 libc6:i386 libxi6:arm64; \
+    wget curl ca-certificates locales procps gpg jq libc6:armhf libc6:arm64 libc6:i386 libxi6:arm64; \
  locale-gen en_US.UTF-8 && dpkg-reconfigure locales; \
  wget -qO- "https://pi-apps-coders.github.io/box64-debs/KEY.gpg" | gpg --dearmor -o /usr/share/keyrings/box64-archive-keyring.gpg; \
  wget -qO- "https://pi-apps-coders.github.io/box86-debs/KEY.gpg" | gpg --dearmor -o /usr/share/keyrings/box86-archive-keyring.gpg; \
